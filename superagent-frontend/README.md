@@ -1,57 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 💻 Superagent Frontend: User Interface
 
-## Getting Started
+This directory houses the client-facing node of the Superagent platform. It manages the visual hierarchy, user state, and asynchronous communication required to interact with the backend reasoning engine. It is bootstrapped on a highly optimized Next.js foundation.
 
-First, run the development server:
+## 🛠️ System Components
+
+* **Framework:** Next.js (React)
+* **Styling:** TailwindCSS
+* **Typography:** Optimized natively using `next/font` (Geist)
+* **Package Management:** npm (fully compatible with yarn, pnpm, or bun)
+
+## ⚙️ Environment Configuration
+
+1. Generate a `.env.local` file in the root of this frontend directory.
+2. Define the connection string targeting your local backend API port:
+   `NEXT_PUBLIC_API_URL=http://localhost:5050`
+
+## 🚀 Initialization Sequence
+
+Install your dependencies and boot the local development server:
 
 ```bash
+# 1. Install the node dependency tree
+npm install
+
+# 2. Boot the Next.js development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Navigate to http://localhost:3000 in your browser. The application features Hot Module Replacement (HMR). You can begin editing the UI directly in app/page.tsx and watch the interface update instantaneously.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deployment & Resources
+Production Deployment: This application is engineered for zero-config deployment via the Vercel Platform. Review the Next.js Deployment Documentation for advanced scaling configurations.
 
-### If you see "OS file watch limit reached" (Linux)
-
-The dev server uses file watchers; on Linux the default limit can be too low. You can:
-
-**Option 1 – Use Webpack instead of Turbopack** (fewer watchers):
-
-```bash
-npm run dev:webpack
-```
-
-**Option 2 – Raise the inotify limit** (so `npm run dev` with Turbopack works):
-
-```bash
-# Temporary (until reboot):
-sudo sysctl fs.inotify.max_user_watches=524288
-sudo sysctl fs.inotify.max_user_instances=512
-
-# Permanent: add the same lines to /etc/sysctl.conf (or a file in /etc/sysctl.d/), then run:
-sudo sysctl -p
-```
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Framework Mastery: Expand your knowledge via the official Next.js Documentation or the Interactive Tutorial.
